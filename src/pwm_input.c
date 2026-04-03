@@ -31,7 +31,7 @@ static rmt_channel_handle_t init_rmt_rx(int gpio)
     return chan;
 }
 
-static rmt_a_rx_task(void *arg)
+static void rmt_a_rx_task(void *arg)
 {
     rmt_channel_handle_t chan = init_rmt_rx(PWM_A_INPUT);
 
@@ -70,7 +70,7 @@ static rmt_a_rx_task(void *arg)
     }
 }
 
-static rmt_b_rx_task(void *arg)
+static void rmt_b_rx_task(void *arg)
 {
     rmt_channel_handle_t chan = init_rmt_rx(PWM_B_INPUT);
 
